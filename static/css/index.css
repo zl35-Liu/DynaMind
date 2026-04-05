@@ -155,3 +155,107 @@ body {
 #interpolation-image-wrapper img {
   border-radius: 5px;
 }
+
+/* 3×5 comparison: GT / eeg2video / Ours × five samples */
+.comparison-section .comparison-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 0.35rem;
+}
+
+.comparison-grid {
+  display: grid;
+  grid-template-columns: 4.75rem repeat(5, minmax(120px, 1fr));
+  gap: 0.2rem 0.3rem;
+  align-items: stretch;
+  min-width: min(100%, 920px);
+}
+
+.comparison-grid .comparison-corner {
+  font-weight: 600;
+  color: #555;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 0.1rem 0.25rem 0 0;
+  font-size: 0.8rem;
+}
+
+.comparison-grid .comparison-col-head {
+  font-weight: 600;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #555;
+  padding: 0.1rem 0;
+}
+
+.comparison-grid .comparison-row-label {
+  font-weight: 700;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 0.3rem;
+  color: #363636;
+  font-family: 'Google Sans', 'Noto Sans', sans-serif;
+}
+
+.comparison-cell video {
+  width: 100%;
+  vertical-align: middle;
+  border-radius: 4px;
+  border: 1px solid #dbdbdb;
+  background: #f5f5f5;
+  display: block;
+}
+
+.result-block {
+  margin-bottom: 2.5rem;
+}
+
+.result-block .table-container {
+  overflow-x: auto;
+}
+
+.result-block table.table {
+  font-size: 0.95rem;
+}
+
+.paper-table-wrap {
+  overflow-x: auto;
+  margin: 1rem 0;
+}
+
+table.table.is-paper {
+  font-size: 0.72rem;
+  white-space: nowrap;
+}
+
+table.table.is-paper th,
+table.table.is-paper td {
+  vertical-align: middle;
+  padding: 0.35em 0.5em;
+}
+
+table.table.is-paper caption {
+  caption-side: bottom;
+  font-size: 0.85rem;
+  white-space: normal;
+  text-align: left;
+  padding-top: 0.75rem;
+  color: #4a4a4a;
+}
+
+#methodology .paper-framework-fig {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid #dbdbdb;
+}
+
+#results .paper-qual-fig {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid #dbdbdb;
+}

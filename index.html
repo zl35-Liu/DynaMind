@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
-  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+        content="DynaMind reconstructs dynamic visual scenes from EEG by aligning temporal dynamics and multimodal semantics to guided diffusion.">
+  <meta name="keywords" content="DynaMind, EEG, diffusion, scene reconstruction, multimodal">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Nerfies: Deformable Neural Radiance Fields</title>
+  <title>DynaMind: Reconstructing Dynamic Visual Scenes from EEG by Aligning Temporal Dynamics and Multimodal Semantics to Guided Diffusion</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -26,18 +26,12 @@
         rel="stylesheet">
 
   <link rel="stylesheet" href="./static/css/bulma.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
   <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
   <link rel="icon" href="./static/images/favicon.svg">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
-  <script src="./static/js/bulma-carousel.min.js"></script>
-  <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
 </head>
 <body>
@@ -51,34 +45,15 @@
     </a>
   </div>
   <div class="navbar-menu">
-    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="https://keunhong.com">
-      <span class="icon">
-          <i class="fas fa-home"></i>
-      </span>
-      </a>
-
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          More Research
-        </a>
-        <div class="navbar-dropdown">
-          <a class="navbar-item" href="https://hypernerf.github.io">
-            HyperNeRF
-          </a>
-          <a class="navbar-item" href="https://nerfies.github.io">
-            Nerfies
-          </a>
-          <a class="navbar-item" href="https://latentfusion.github.io">
-            LatentFusion
-          </a>
-          <a class="navbar-item" href="https://photoshape.github.io">
-            PhotoShape
-          </a>
-        </div>
-      </div>
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center; flex-wrap: wrap;">
+      <a class="navbar-item" href="./">Home</a>
+      <a class="navbar-item" href="#comparison">Videos</a>
+      <a class="navbar-item" href="#abstract">Abstract</a>
+      <a class="navbar-item" href="#methodology">Methodology</a>
+      <a class="navbar-item" href="#results">Results</a>
+      <a class="navbar-item" href="#acknowledgments">Acknowledgments</a>
+      <a class="navbar-item" href="#BibTeX">BibTeX</a>
     </div>
-
   </div>
 </nav>
 
@@ -88,39 +63,26 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Nerfies: Deformable Neural Radiance Fields</h1>
+          <h1 class="title is-1 publication-title">DynaMind: Reconstructing Dynamic Visual Scenes from EEG by Aligning Temporal Dynamics and Multimodal Semantics to Guided Diffusion</h1>
           <div class="is-size-5 publication-authors">
-            <span class="author-block">
-              <a href="https://keunhong.com">Keunhong Park</a><sup>1</sup>,</span>
-            <span class="author-block">
-              <a href="https://utkarshsinha.com">Utkarsh Sinha</a><sup>2</sup>,</span>
-            <span class="author-block">
-              <a href="https://jonbarron.info">Jonathan T. Barron</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="http://sofienbouaziz.com">Sofien Bouaziz</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://www.danbgoldman.com">Dan B Goldman</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://homes.cs.washington.edu/~seitz/">Steven M. Seitz</a><sup>1,2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="http://www.ricardomartinbrualla.com">Ricardo Martin-Brualla</a><sup>2</sup>
-            </span>
+            <span class="author-block">Junxiang Liu,</span>
+            <span class="author-block">Junming Lin,</span>
+            <span class="author-block">Jie Zhou,</span>
+            <span class="author-block">Wei Xiong,</span>
+            <span class="author-block">Hongfei Ji,</span>
+            <span class="author-block">Jie Zhuang,</span>
+            <span class="author-block">Jie Li<sup>*</sup>,</span>
+            <span class="author-block">Jiangtong Li<sup>*</sup></span>
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>University of Washington,</span>
-            <span class="author-block"><sup>2</sup>Google Research</span>
+            <span class="author-block">Tongji University</span>
           </div>
 
           <div class="column has-text-centered">
             <div class="publication-links">
-              <!-- PDF Link. -->
               <span class="link-block">
-                <a href="https://arxiv.org/pdf/2011.12948"
+                <a href="https://arxiv.org/abs/2509.01177"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -129,43 +91,32 @@
                 </a>
               </span>
               <span class="link-block">
-                <a href="https://arxiv.org/abs/2011.12948"
+                <a href="#"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
-                      <i class="ai ai-arxiv"></i>
+                      <i class="fas fa-chalkboard-teacher"></i>
                   </span>
-                  <span>arXiv</span>
+                  <span>Presentation</span>
                 </a>
               </span>
-              <!-- Video Link. -->
               <span class="link-block">
-                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-youtube"></i>
-                  </span>
-                  <span>Video</span>
-                </a>
-              </span>
-              <!-- Code Link. -->
-              <span class="link-block">
-                <a href="https://github.com/google/nerfies"
+                <a href="https://github.com/zl35-Liu/DynaMind-main"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
                   </span>
                   <span>Code</span>
-                  </a>
+                </a>
               </span>
-              <!-- Dataset Link. -->
               <span class="link-block">
-                <a href="https://github.com/google/nerfies/releases/tag/0.1"
+                <a href="#BibTeX"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
-                      <i class="far fa-images"></i>
+                      <i class="fas fa-book"></i>
                   </span>
-                  <span>Data</span>
-                  </a>
+                  <span>BibTeX</span>
+                </a>
+              </span>
             </div>
 
           </div>
@@ -175,73 +126,100 @@
   </div>
 </section>
 
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video id="teaser" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/teaser.mp4"
-                type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
-        free-viewpoint
-        portraits.
-      </h2>
-    </div>
-  </div>
-</section>
+<!-- Qualitative comparison: place MP4 files under static/videos/compare/ (see paths below). -->
+<section class="section comparison-section" id="comparison">
+  <div class="container is-max-widescreen">
+    <h2 class="title is-3 has-text-centered">Qualitative Comparison</h2>
+    <p class="subtitle is-6 has-text-centered">
+      Three rows (GT, EEG2Video baseline, Ours) × five columns. Replace video paths or filenames as needed.
+    </p>
+    <div class="comparison-scroll">
+      <div class="comparison-grid">
+        <div class="comparison-corner"></div>
+        <div class="comparison-col-head">Sample 1</div>
+        <div class="comparison-col-head">Sample 2</div>
+        <div class="comparison-col-head">Sample 3</div>
+        <div class="comparison-col-head">Sample 4</div>
+        <div class="comparison-col-head">Sample 5</div>
 
+        <div class="comparison-row-label">GT</div>
+        <div class="comparison-cell">
+          <video controls muted loop playsinline preload="metadata">
+            <source src="./static/videos/compare/col01_gt.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="comparison-cell">
+          <video controls muted loop playsinline preload="metadata">
+            <source src="./static/videos/compare/col02_gt.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="comparison-cell">
+          <video controls muted loop playsinline preload="metadata">
+            <source src="./static/videos/compare/col03_gt.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="comparison-cell">
+          <video controls muted loop playsinline preload="metadata">
+            <source src="./static/videos/compare/col04_gt.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="comparison-cell">
+          <video controls muted loop playsinline preload="metadata">
+            <source src="./static/videos/compare/col05_gt.mp4" type="video/mp4">
+          </video>
+        </div>
 
-<section class="hero is-light is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-steve">
-          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/steve.mp4"
-                    type="video/mp4">
+        <div class="comparison-row-label">EEG2Video</div>
+        <div class="comparison-cell">
+          <video controls muted loop playsinline preload="metadata">
+            <source src="./static/videos/compare/col01_eeg2video.mp4" type="video/mp4">
           </video>
         </div>
-        <div class="item item-chair-tp">
-          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/chair-tp.mp4"
-                    type="video/mp4">
+        <div class="comparison-cell">
+          <video controls muted loop playsinline preload="metadata">
+            <source src="./static/videos/compare/col02_eeg2video.mp4" type="video/mp4">
           </video>
         </div>
-        <div class="item item-shiba">
-          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/shiba.mp4"
-                    type="video/mp4">
+        <div class="comparison-cell">
+          <video controls muted loop playsinline preload="metadata">
+            <source src="./static/videos/compare/col03_eeg2video.mp4" type="video/mp4">
           </video>
         </div>
-        <div class="item item-fullbody">
-          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/fullbody.mp4"
-                    type="video/mp4">
+        <div class="comparison-cell">
+          <video controls muted loop playsinline preload="metadata">
+            <source src="./static/videos/compare/col04_eeg2video.mp4" type="video/mp4">
           </video>
         </div>
-        <div class="item item-blueshirt">
-          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/blueshirt.mp4"
-                    type="video/mp4">
+        <div class="comparison-cell">
+          <video controls muted loop playsinline preload="metadata">
+            <source src="./static/videos/compare/col05_eeg2video.mp4" type="video/mp4">
           </video>
         </div>
-        <div class="item item-mask">
-          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/mask.mp4"
-                    type="video/mp4">
+
+        <div class="comparison-row-label">Ours</div>
+        <div class="comparison-cell">
+          <video controls muted loop playsinline preload="metadata">
+            <source src="./static/videos/compare/col01_ours.mp4" type="video/mp4">
           </video>
         </div>
-        <div class="item item-coffee">
-          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/coffee.mp4"
-                    type="video/mp4">
+        <div class="comparison-cell">
+          <video controls muted loop playsinline preload="metadata">
+            <source src="./static/videos/compare/col02_ours.mp4" type="video/mp4">
           </video>
         </div>
-        <div class="item item-toby">
-          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/toby2.mp4"
-                    type="video/mp4">
+        <div class="comparison-cell">
+          <video controls muted loop playsinline preload="metadata">
+            <source src="./static/videos/compare/col03_ours.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="comparison-cell">
+          <video controls muted loop playsinline preload="metadata">
+            <source src="./static/videos/compare/col04_ours.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="comparison-cell">
+          <video controls muted loop playsinline preload="metadata">
+            <source src="./static/videos/compare/col05_ours.mp4" type="video/mp4">
           </video>
         </div>
       </div>
@@ -249,206 +227,290 @@
   </div>
 </section>
 
-
-<section class="section">
+<section class="section" id="abstract">
   <div class="container is-max-desktop">
-    <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We present the first method capable of photorealistically reconstructing a non-rigidly
-            deforming scene using photos/videos captured casually from mobile phones.
-          </p>
-          <p>
-            Our approach augments neural radiance fields
-            (NeRF) by optimizing an
-            additional continuous volumetric deformation field that warps each observed point into a
-            canonical 5D NeRF.
-            We observe that these NeRF-like deformation fields are prone to local minima, and
-            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-            more robust optimization.
-            By adapting principles from geometry processing and physical simulation to NeRF-like
-            models, we propose an elastic regularization of the deformation field that further
-            improves robustness.
-          </p>
-          <p>
-            We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
-            photos/videos into deformable NeRF
-            models that allow for photorealistic renderings of the subject from arbitrary
-            viewpoints, which we dub <i>"nerfies"</i>. We evaluate our method by collecting data
-            using a
-            rig with two mobile phones that take time-synchronized photos, yielding train/validation
-            images of the same pose at different viewpoints. We show that our method faithfully
-            reconstructs non-rigidly deforming scenes and reproduces unseen views with high
-            fidelity.
+            Reconstructing dynamic visual scenes from electroencephalography (EEG) signals presents
+            a significant challenge. Existing methods often yield temporally disjointed and inaccurate
+            visual semantic reconstructions, struggling with poor dynamic timing alignment and lacking
+            the integration of cognitive priors. In neuroscience, the dual-stream theory describes the
+            physiological basis for the generation and transmission of visual neural signals, offering a
+            valuable prior to guide the reconstruction process. To address these challenges, we follow
+            the guidance of dual-stream theory and introduce <span class="dnerf">DynaMind</span>, a model
+            that reconstructs video by jointly modeling neural dynamics and semantic features using three
+            core modules: a Regional-aware Semantic Mapper (RSM), a Temporal-aware Dynamic Aligner (TDA),
+            and a Dual-Guidance Video Reconstructor (DGVR). The RSM models neural pathways to capture
+            detailed semantic information, using regional-aware encoders interconnected via channel-wise
+            multiplicative gating. Meanwhile, the TDA ensures temporal alignment, generating a dynamic
+            latent sequence (blueprint) that corresponds to the original neural recordings. The DGVR
+            uses both semantic and temporal guidance to translate the aligned blueprint into a
+            high-fidelity video reconstruction. On the SEED-DV and CineBrain datasets, DynaMind improves
+            reconstructed video accuracy by 12.5% and 4.28%, respectively. Moreover, it boosts temporal
+            consistency on both datasets, achieving score increases of 19.7% (FVMD) and 4.19% (FVD).
           </p>
         </div>
       </div>
     </div>
-    <!--/ Abstract. -->
-
-    <!-- Paper video. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
-        <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-      </div>
-    </div>
-    <!--/ Paper video. -->
   </div>
 </section>
 
-
-<section class="section">
+<!-- Export Figure 2 from the camera-ready PDF to: static/images/paper/figure2_overview.png -->
+<section class="section" id="methodology">
   <div class="container is-max-desktop">
-
-    <div class="columns is-centered">
-
-      <!-- Visual Effects. -->
-      <div class="column">
-        <div class="content">
-          <h2 class="title is-3">Visual Effects</h2>
-          <p>
-            Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
-            would be impossible without nerfies since it would require going through a wall.
-          </p>
-          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/dollyzoom-stacked.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-      <!--/ Visual Effects. -->
-
-      <!-- Matting. -->
-      <div class="column">
-        <h2 class="title is-3">Matting</h2>
-        <div class="columns is-centered">
-          <div class="column content">
-            <p>
-              As a byproduct of our method, we can also solve the matting problem by ignoring
-              samples that fall outside of a bounding box during rendering.
-            </p>
-            <video id="matting-video" controls playsinline height="100%">
-              <source src="./static/videos/matting.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-
-        </div>
-      </div>
+    <h2 class="title is-3 has-text-centered">Methodology</h2>
+    <div class="content has-text-justified">
+      <p>
+        <span class="dnerf">DynaMind</span> reconstructs video from EEG with three synergistic modules
+        (Figure&nbsp;2). The <strong>Regional-aware Semantic Mapper (RSM)</strong> generates a semantic
+        diffusion prior by processing regional brain patterns with neuromorphic feature interactions
+        (channel-wise gating along dual-stream pathways, multimodal alignment to CLIP spaces, and a
+        diffusion prior for CLIP text conditioning). The <strong>Temporal-aware Dynamic Aligner
+        (TDA)</strong> builds a coherent temporal blueprint from windowed EEG via a temporal network,
+        aligned to video via frame-wise and structural consistency losses. The
+        <strong>Dual-Guidance Video Reconstructor (DGVR)</strong> is a latent video diffusion model
+        that initializes latents from the temporal blueprint and injects the semantic prior through
+        cross-attention, yielding reconstructions that are both semantically accurate and temporally
+        coherent.
+      </p>
     </div>
-    <!--/ Matting. -->
-
-    <!-- Animation. -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Animation</h2>
-
-        <!-- Interpolating. -->
-        <h3 class="title is-4">Interpolating states</h3>
-        <div class="content has-text-justified">
-          <p>
-            We can also animate the scene by interpolating the deformation latent codes of two input
-            frames. Use the slider here to linearly interpolate between the left frame and the right
-            frame.
-          </p>
-        </div>
-        <div class="columns is-vcentered interpolation-panel">
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_start.jpg"
-                 class="interpolation-image"
-                 alt="Interpolate start reference image."/>
-            <p>Start Frame</p>
-          </div>
-          <div class="column interpolation-video-column">
-            <div id="interpolation-image-wrapper">
-              Loading...
-            </div>
-            <input class="slider is-fullwidth is-large is-info"
-                   id="interpolation-slider"
-                   step="1" min="0" max="100" value="0" type="range">
-          </div>
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_end.jpg"
-                 class="interpolation-image"
-                 alt="Interpolation end reference image."/>
-            <p class="is-bold">End Frame</p>
-          </div>
-        </div>
-        <br/>
-        <!--/ Interpolating. -->
-
-        <!-- Re-rendering. -->
-        <h3 class="title is-4">Re-rendering the input video</h3>
-        <div class="content has-text-justified">
-          <p>
-            Using <span class="dnerf">Nerfies</span>, you can re-render a video from a novel
-            viewpoint such as a stabilized camera by playing back the training deformations.
-          </p>
-        </div>
-        <div class="content has-text-centered">
-          <video id="replay-video"
-                 controls
-                 muted
-                 preload
-                 playsinline
-                 width="75%">
-            <source src="./static/videos/replay.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <!--/ Re-rendering. -->
-
-      </div>
-    </div>
-    <!--/ Animation. -->
-
-
-    <!-- Concurrent Work. -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Related Links</h2>
-
-        <div class="content has-text-justified">
-          <p>
-            There's a lot of excellent work that was introduced around the same time as ours.
-          </p>
-          <p>
-            <a href="https://arxiv.org/abs/2104.09125">Progressive Encoding for Neural Optimization</a> introduces an idea similar to our windowed position encoding for coarse-to-fine optimization.
-          </p>
-          <p>
-            <a href="https://www.albertpumarola.com/research/D-NeRF/index.html">D-NeRF</a> and <a href="https://gvv.mpi-inf.mpg.de/projects/nonrigid_nerf/">NR-NeRF</a>
-            both use deformation fields to model non-rigid scenes.
-          </p>
-          <p>
-            Some works model videos with a NeRF by directly modulating the density, such as <a href="https://video-nerf.github.io/">Video-NeRF</a>, <a href="https://www.cs.cornell.edu/~zl548/NSFF/">NSFF</a>, and <a href="https://neural-3d-video.github.io/">DyNeRF</a>
-          </p>
-          <p>
-            There are probably many more by the time you are reading this. Check out <a href="https://dellaert.github.io/NeRF/">Frank Dellart's survey on recent NeRF papers</a>, and <a href="https://github.com/yenchenlin/awesome-NeRF">Yen-Chen Lin's curated list of NeRF papers</a>.
-          </p>
-        </div>
-      </div>
-    </div>
-    <!--/ Concurrent Work. -->
-
+    <figure class="has-text-centered" style="margin-top: 1.25rem;">
+      <img class="paper-framework-fig"
+           src="./static/images/paper/figure2_overview.png"
+           alt="Figure 2: Overview of the DynaMind framework (RSM, TDA, DGVR).">
+      <figcaption class="is-size-7 has-text-centered" style="max-width: 52rem; margin: 0.75rem auto 0; color: #4a4a4a;">
+        Figure 2. Overview of DynaMind: a dual-guidance architecture for reconstructing high-fidelity
+        videos from EEG. The RSM extracts a semantically rich diffusion prior from region-aware EEG
+        processing; the TDA produces a dynamic temporal blueprint; the DGVR uses the semantic prior
+        and blueprint to synthesize video.
+      </figcaption>
+    </figure>
   </div>
 </section>
 
+<section class="section" id="results">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Results</h2>
+    <div class="content has-text-justified result-block">
+      <p>
+        We evaluate on <strong>SEED-DV</strong> (40-class EEG-video stimuli) and <strong>CineBrain</strong>
+        (naturalistic clips). On SEED-DV, RSM features set a new state of the art in EEG classification
+        (Table&nbsp;1); video reconstruction surpasses EEG2Video across semantic and pixel metrics as the
+        number of classes grows (Table&nbsp;2), including lower Fréchet Video Motion Distance (FVMD) for
+        smoother temporal dynamics. On CineBrain, our model improves over GLFA and CineSync-EEG on
+        semantic and perceptual scores (Table&nbsp;3). Ablations (Table&nbsp;4) show that all brain regions
+        contribute, with the occipital lobe most critical; multimodal features (especially text) and
+        the structural consistency objective are essential for semantic quality and FVMD.
+      </p>
+      <p>
+        Qualitatively (Figure&nbsp;4), reconstructions better match ground-truth semantics (e.g., cat,
+        car, river) and exhibit smoother motion with fewer flicker and warping artifacts than EEG2Video.
+      </p>
+    </div>
+
+    <div class="result-block content">
+      <h3 class="title is-4 has-text-centered">Table 1. EEG classification (SEED-DV)</h3>
+      <p class="is-size-7 has-text-centered">Mean accuracy (%) ± std across subjects. * = significantly above chance (<i>p</i> &lt; 0.05).</p>
+      <div class="paper-table-wrap">
+        <table class="table is-bordered is-striped is-narrow is-fullwidth is-paper">
+          <thead>
+            <tr>
+              <th>Method</th>
+              <th>40-c top-1</th>
+              <th>40-c top-5</th>
+              <th>9-c top-1</th>
+              <th>9-c top-3</th>
+              <th>Color</th>
+              <th>Fast/Slow</th>
+              <th>Numbers</th>
+              <th>Human Face</th>
+              <th>Human</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Chance level</td><td>2.50</td><td>12.50</td><td>11.11</td><td>33.33</td><td>20.57</td><td>50.00</td><td>65.64</td><td>62.25</td><td>71.43</td></tr>
+            <tr><td>ShallowNet [27]</td><td>5.59/2.27*</td><td>16.93/4.66*</td><td>21.40/1.96*</td><td>49.62/2.34*</td><td>27.00/2.09*</td><td>56.62/1.77*</td><td>66.15/0.89</td><td>64.87/1.54</td><td>73.21/1.52</td></tr>
+            <tr><td>DeepNet [27]</td><td>4.56/1.52*</td><td>14.30/3.25*</td><td>20.27/1.25*</td><td>48.06/1.59*</td><td>26.37/1.95*</td><td>55.42/0.59*</td><td>65.71/0.24</td><td>61.58/3.93</td><td>72.86/0.40</td></tr>
+            <tr><td>EEGNet [13]</td><td>4.64/0.86*</td><td>14.25/1.87*</td><td>19.63/0.81*</td><td>47.04/1.45*</td><td>25.46/1.31*</td><td>51.99/2.00</td><td>64.67/0.60</td><td>61.37/1.31</td><td>72.38/0.98</td></tr>
+            <tr><td>Conformer [32]</td><td>4.93/1.57*</td><td>15.36/4.44*</td><td>20.92/0.98*</td><td>49.25/1.49*</td><td>27.53/1.37*</td><td>55.02/0.83*</td><td>65.73/0.26</td><td>64.96/1.14</td><td>73.00/0.85</td></tr>
+            <tr><td>TSConv [33]</td><td>4.92/0.99*</td><td>15.05/2.31*</td><td>20.00/1.01*</td><td>47.76/1.51*</td><td>26.89/1.83*</td><td>55.32/0.99*</td><td>65.39/0.41</td><td>64.39/1.47</td><td>72.68/0.67</td></tr>
+            <tr><td>GLMNet [18]</td><td>6.20/3.02*</td><td>17.75/4.24*</td><td>21.93/1.87*</td><td>50.01/2.52*</td><td>27.33/1.45*</td><td>57.35/1.98*</td><td>66.21/0.91</td><td>65.10/1.45</td><td>73.34/1.31</td></tr>
+            <tr><td><strong>Ours</strong></td><td><strong>8.27/2.85*</strong></td><td><strong>22.38/4.80*</strong></td><td><strong>22.73/3.07*</strong></td><td><strong>51.93/4.73*</strong></td><td>27.43/1.11*</td><td>56.44/1.51*</td><td><strong>67.56/0.94</strong></td><td><strong>82.47/0.81*</strong></td><td>73.64/1.70</td></tr>
+          </tbody>
+          <caption>
+            Average classification accuracy (%) and standard deviation with different EEG classifiers.
+            Chance level is the fraction of the largest class.
+          </caption>
+        </table>
+      </div>
+    </div>
+
+    <div class="result-block content">
+      <h3 class="title is-4 has-text-centered">Table 2. Reconstruction on SEED-DV (varying # classes)</h3>
+      <div class="paper-table-wrap">
+        <table class="table is-bordered is-striped is-narrow is-fullwidth is-paper">
+          <thead>
+            <tr>
+              <th># Classes</th>
+              <th>Method</th>
+              <th colspan="2">Video semantic</th>
+              <th>Video pixel</th>
+              <th colspan="2">Frame semantic</th>
+              <th>Frame pixel</th>
+            </tr>
+            <tr>
+              <th></th>
+              <th></th>
+              <th>2-way</th>
+              <th>40-way</th>
+              <th>FVMD↓</th>
+              <th>2-way</th>
+              <th>40-way</th>
+              <th>SSIM↑</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>10</td><td>Ours</td><td>0.847±0.01</td><td>0.394±0.03</td><td>1601.84±0.02</td><td>0.833±0.02</td><td>0.308±0.01</td><td>0.309±0.02</td></tr>
+            <tr><td>10</td><td>EEG2Video</td><td>0.852±0.02</td><td>0.340±0.01</td><td>1977.13±0.01</td><td>0.798±0.03</td><td>0.232±0.02</td><td>0.300±0.03</td></tr>
+            <tr><td>20</td><td>Ours</td><td>0.835±0.01</td><td>0.345±0.01</td><td>1587.91±0.01</td><td>0.818±0.02</td><td>0.277±0.02</td><td>0.290±0.02</td></tr>
+            <tr><td>20</td><td>EEG2Video</td><td>0.813±0.02</td><td>0.273±0.03</td><td>1960.20±0.03</td><td>0.785±0.04</td><td>0.184±0.02</td><td>0.242±0.03</td></tr>
+            <tr><td>30</td><td>Ours</td><td>0.833±0.02</td><td>0.309±0.01</td><td>1661.06±0.03</td><td>0.805±0.02</td><td>0.254±0.01</td><td>0.293±0.01</td></tr>
+            <tr><td>30</td><td>EEG2Video</td><td>0.794±0.02</td><td>0.209±0.05</td><td>2016.67±0.04</td><td>0.785±0.04</td><td>0.180±0.02</td><td>0.228±0.04</td></tr>
+            <tr><td>40</td><td>Ours</td><td>0.828±0.02</td><td>0.284±0.02</td><td>1637.55±0.01</td><td>0.807±0.03</td><td>0.241±0.01</td><td>0.280±0.01</td></tr>
+            <tr><td>40</td><td>EEG2Video</td><td>0.798±0.03</td><td>0.159±0.01</td><td>2038.27±0.02</td><td>0.774±0.02</td><td>0.138±0.01</td><td>0.256±0.03</td></tr>
+          </tbody>
+          <caption>Semantic- and pixel-level metrics at video / frame level (protocol aligned with EEG2Video).</caption>
+        </table>
+      </div>
+    </div>
+
+    <div class="result-block content">
+      <h3 class="title is-4 has-text-centered">Table 3. Reconstruction on CineBrain (EEG-only)</h3>
+      <div class="paper-table-wrap">
+        <table class="table is-bordered is-striped is-narrow is-fullwidth is-paper">
+          <thead>
+            <tr>
+              <th rowspan="2">Method</th>
+              <th colspan="3">Video-based</th>
+              <th colspan="2">Video perceptual</th>
+              <th colspan="2">Frame-based semantic</th>
+              <th colspan="2">Frame-based perceptual</th>
+            </tr>
+            <tr>
+              <th>2-way↑</th>
+              <th>50-way↑</th>
+              <th>FVD↓</th>
+              <th>DTC↑</th>
+              <th>CTC↑</th>
+              <th>2-way↑</th>
+              <th>50-way↑</th>
+              <th>SSIM↑</th>
+              <th>PSNR↑</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>GLFA [14]</td><td>0.801</td><td>0.167</td><td>128.76</td><td>0.706</td><td>0.735</td><td>0.847</td><td>0.225</td><td>0.123</td><td>7.526</td></tr>
+            <tr><td>CineSync-EEG [10]</td><td>0.891</td><td>0.304</td><td>53.75</td><td>0.899</td><td>0.937</td><td>0.918</td><td>0.349</td><td>0.231</td><td>11.75</td></tr>
+            <tr><td><strong>Ours</strong></td><td><strong>0.902</strong></td><td><strong>0.317</strong></td><td><strong>51.50</strong></td><td><strong>0.907</strong></td><td><strong>0.942</strong></td><td><strong>0.920</strong></td><td>0.349</td><td>0.225</td><td>10.98</td></tr>
+          </tbody>
+          <caption>Semantic and perceptual metrics at video and frame level (Cine-Benchmark protocol).</caption>
+        </table>
+      </div>
+    </div>
+
+    <div class="result-block content">
+      <h3 class="title is-4 has-text-centered">Table 4. Ablations</h3>
+      <div class="paper-table-wrap">
+        <table class="table is-bordered is-striped is-narrow is-fullwidth is-paper">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Method</th>
+              <th colspan="5">SEED-DV</th>
+              <th colspan="7">CineBrain</th>
+            </tr>
+            <tr>
+              <th></th>
+              <th></th>
+              <th>40-c↑</th>
+              <th>Vid 40w↑</th>
+              <th>FVMD↓</th>
+              <th>Fr 40w↑</th>
+              <th>SSIM↑</th>
+              <th>Vid 50w↑</th>
+              <th>FVD↓</th>
+              <th>DTC↑</th>
+              <th>CTC↑</th>
+              <th>Fr 50w↑</th>
+              <th>SSIM↑</th>
+              <th>PSNR↑</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td></td><td><strong>Ours</strong></td><td>8.27</td><td>0.284</td><td>1637.55</td><td>0.241</td><td>0.280</td><td>0.317</td><td>51.50</td><td>0.907</td><td>0.942</td><td>0.349</td><td>0.225</td><td>10.98</td></tr>
+            <tr><th rowspan="4">Brain</th><td>w/o Frontal</td><td>7.67</td><td>0.264</td><td>1677.42</td><td>0.220</td><td>0.267</td><td>0.300</td><td>57.41</td><td>0.891</td><td>0.926</td><td>0.341</td><td>0.216</td><td>10.40</td></tr>
+            <tr><td>w/o Parietal</td><td>7.65</td><td>0.263</td><td>1631.21</td><td>0.221</td><td>0.267</td><td>0.291</td><td>60.89</td><td>0.877</td><td>0.918</td><td>0.328</td><td>0.211</td><td>10.33</td></tr>
+            <tr><td>w/o Occipital</td><td>6.73</td><td>0.239</td><td>1712.11</td><td>0.189</td><td>0.253</td><td>0.254</td><td>70.88</td><td>0.868</td><td>0.903</td><td>0.310</td><td>0.208</td><td>10.11</td></tr>
+            <tr><td>w/o Temporal</td><td>7.22</td><td>0.252</td><td>1658.89</td><td>0.205</td><td>0.260</td><td>0.297</td><td>60.64</td><td>0.880</td><td>0.916</td><td>0.321</td><td>0.211</td><td>10.38</td></tr>
+            <tr><th rowspan="3">Features</th><td>w/o Image</td><td>8.08</td><td>0.281</td><td>1649.77</td><td>0.235</td><td>0.277</td><td>0.302</td><td>57.33</td><td>0.891</td><td>0.929</td><td>0.341</td><td>0.220</td><td>10.67</td></tr>
+            <tr><td>w/o Text</td><td>7.56</td><td>0.252</td><td>1703.48</td><td>0.212</td><td>0.270</td><td>0.245</td><td>76.23</td><td>0.866</td><td>0.899</td><td>0.301</td><td>0.202</td><td>9.98</td></tr>
+            <tr><td>w/o Category</td><td>8.11</td><td>0.276</td><td>1644.07</td><td>0.232</td><td>0.278</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+            <tr><th>Consistency</th><td>w/o Consistency</td><td>—</td><td>0.279</td><td>1916.91</td><td>0.240</td><td>0.280</td><td>0.308</td><td>56.88</td><td>0.859</td><td>0.887</td><td>0.348</td><td>0.221</td><td>10.78</td></tr>
+          </tbody>
+          <caption>
+            Removing individual brain regions, multimodal features, or the structural consistency loss degrades performance,
+            validating each component (SEED-DV and CineBrain).
+          </caption>
+        </table>
+      </div>
+    </div>
+
+    <!-- Export Figure 4 from the camera-ready PDF to: static/images/paper/figure4_qualitative.png -->
+    <div class="result-block content has-text-centered">
+      <h3 class="title is-4">Figure 4. Qualitative comparison (SEED-DV)</h3>
+      <figure class="image" style="margin-top: 0.75rem;">
+        <img class="paper-qual-fig"
+             src="./static/images/paper/figure4_qualitative.png"
+             alt="Figure 4: Ours vs EEG2Video vs ground truth on SEED-DV.">
+      </figure>
+      <p class="is-size-7 has-text-justified" style="max-width: 52rem; margin: 0.75rem auto 0; color: #4a4a4a;">
+        Video reconstruction results of ours and EEG2Video compared against ground truth (EEG2Video samples from their
+        official release). Our model better preserves object semantics and temporal coherence; see supplementary for more
+        SEED-DV and CineBrain examples.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="acknowledgments">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-four-fifths content has-text-justified">
+        <h2 class="title is-3 has-text-centered">Acknowledgments</h2>
+        <p>
+          We thank reviewers and colleagues for their feedback. This work was supported by
+          <em>(add funding agencies, grants, and compute credits here).</em>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{park2021nerfies,
-  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
-  title     = {Nerfies: Deformable Neural Radiance Fields},
-  journal   = {ICCV},
-  year      = {2021},
+    <p class="is-size-7">Same as the export from <a href="https://arxiv.org/abs/2509.01177">arXiv:2509.01177</a> (<a href="https://arxiv.org/bibtex/2509.01177">bibtex</a>).</p>
+    <pre><code>@misc{liu2025dynamindreconstructingdynamicvisual,
+      title={DynaMind: Reconstructing Dynamic Visual Scenes from EEG by Aligning Temporal Dynamics and Multimodal Semantics to Guided Diffusion},
+      author={Junxiang Liu and Junming Lin and Jiangtong Li and Jie Li},
+      year={2025},
+      eprint={2509.01177},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2509.01177},
 }</code></pre>
   </div>
 </section>
@@ -457,11 +519,7 @@
 <footer class="footer">
   <div class="container">
     <div class="content has-text-centered">
-      <a class="icon-link"
-         href="./static/videos/nerfies_paper.pdf">
-        <i class="fas fa-file-pdf"></i>
-      </a>
-      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+      <a class="icon-link" href="https://github.com/zl35-Liu/DynaMind-main" title="Code on GitHub">
         <i class="fab fa-github"></i>
       </a>
     </div>
@@ -469,16 +527,8 @@
       <div class="column is-8">
         <div class="content">
           <p>
-            This website is licensed under a <a rel="license"
-                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-          <p>
-            This means you are free to borrow the <a
-              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
-            we just ask that you link back to this page in the footer.
-            Please remember to remove the analytics code included in the header of the website which
-            you do not want on your website.
+            Website template adapted from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>
+            (CC BY-SA 4.0). Remove or replace the Google Analytics block in <code>&lt;head&gt;</code> if undesired.
           </p>
         </div>
       </div>
